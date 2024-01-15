@@ -4,14 +4,15 @@ const HeaderTextField = document.createTextNode("Резюме");
 const HeaderButtonAdd = document.createTextNode("Отправить");
 const HeaderCheckBox = document.createTextNode("Согласие на обработку персональных данных")
 
-// let form;
-
 class myForm {
     #form
-    constructor() {
+    constructor(Name) {
         this.form = document.createElement("div"); //создаем тег
-        this.form.className = "form"; //даем имя класса
+        this.form.className = Name; //даем имя класса
+        this.form.style.position = "fixed";
         this.form.style.display = "flex";
+        this.form.style.top = "20px";
+        this.form.style.backgroundColor = "white";
         this.form.style.flexDirection = "column";
         this.form.style.justifyContent = "space-between"
     }
@@ -57,15 +58,15 @@ class myForm {
     }
 }
 
-
-
-let form1 = new myForm();
-form1.createInput(HeaderFirstName);
-form1.createInput(HeaderLastName);
-form1.createTextArea(HeaderTextField);
-form1.createCheckBox(HeaderCheckBox);
-form1.createButton(HeaderButtonAdd);
-form1.draw();
+document.querySelector('.form1__button').addEventListener('click', () => {
+    let form1 = new myForm("form1");
+    form1.createInput(HeaderFirstName);
+    form1.createInput(HeaderLastName);
+    form1.createTextArea(HeaderTextField);
+    form1.createCheckBox(HeaderCheckBox);
+    form1.createButton(HeaderButtonAdd);
+    form1.draw();
+});
 
 
 
