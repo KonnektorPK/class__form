@@ -7,14 +7,15 @@
 }
 
 label {
-    margin-top: 10px;
-    padding: 5px;
+    margin: 8px;
+    padding: 5px 10px;
 }
 
 input {
+    margin: 8px;
     border-radius: 4px;
     border: 1px solid lightslategrey;
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 input:focus {
@@ -23,7 +24,13 @@ input:focus {
     box-shadow: 1px 1px 2px #7FC7FF;
 }
 
+p {
+    margin: 8px;
+    font-size: 20px;
+}
+
 button {
+    margin: 8px;
     border-radius: 4px;
     background-color: #007FFF;
     color: white;
@@ -58,6 +65,34 @@ textarea {
     border: 1px solid lightslategrey;
 }
 
-.form1__button {
-    margin: 20px;
+
+
+.formn {
+    width: fit-content;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.search {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+}
+
+.search__button {}
+
+.search__elements {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.search__form {
+    width: 100%;
+    /* width: 20%; */
+    /* margin: 8px; */
 }
